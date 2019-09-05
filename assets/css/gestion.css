@@ -1,0 +1,686 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+/*Navbar*/
+
+nav {
+    position: fixed!important;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 -3px 18px 0.2px rgba(7, 7, 7, 0.24);
+    z-index: 999;
+    transition: top 0.7s ease-in-out!important;
+}
+
+#navbarNavDropdown{
+    flex-direction:row-reverse;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:#262626 !important;
+}
+nav ul li a button{
+    background-color: #e7375c;
+    border-color: #e7375c!important;
+    border-radius: 24px;
+    height: 46px;
+    width: 136px;
+    border: 0;
+    color: white;
+}
+.navbar-nav{
+    align-items:center;
+}
+.nav-item{
+    margin-left:0!important;
+}
+.dropdown-menu{
+    min-width:0 !important;
+}
+.navbar{
+    border-bottom: 1px solid #dedede;
+}
+#logonav{
+    width:120px;
+}
+.profilnav{
+   width:25px;
+}
+/*Fin navbar*/
+
+
+header {
+    height: 100%;
+    /*background-color: aquamarine;*/
+    font-family: Lato;
+    position: relative;
+}
+
+button {
+    border-radius: 24px!important;
+    background-color: #e7375c!important;
+    border-color: #e7375c!important;
+    margin-bottom: 8px!important;
+    transition: 0.7s;
+}
+
+button:hover {
+    border-radius: 24px!important;
+    background-color: rgba(231, 55, 92, 0) !important;
+    border: 1px solid #e7375c;
+    color: #e7375c!important;
+}
+
+header p {
+    font-size: 1vw;
+}
+
+header a {
+    color: #e7375c;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(127, 255, 212, 0);
+    transition: 0.7s;
+}
+
+header a:hover {
+    color: #e7375c;
+    text-decoration: none;
+}
+
+header small {
+    color: #202020;
+}
+
+header #fondgauche {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 12%;
+}
+
+header #fonddroit {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    width: 12%;
+}
+
+/*btn scroll down*/
+
+#section10 a {
+    padding-top: 60px;
+}
+#section10 a span {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #353535;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+#section10 a span::before {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #353535;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb10 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#NomDeFam{
+    color:#e7375c;
+}
+
+/*fin btn*/
+
+.rechercheAide {
+    font-family: Lato;
+}
+
+
+.rechercheAide #info {
+    padding-top: 1%;
+}
+
+.rechercheAide input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+}
+.rechercheAide textarea{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+    height:200px !important;
+}
+
+.rechercheAide input:focus{
+    color: #495057;
+    border-color: #e7375c!important;
+    outline: 0;
+    box-shadow: 2px 3px 17px 0.2rem rgba(255, 0, 118, 0.12)
+}
+.rechercheAide textarea:focus{
+    color: #495057;
+    border-color: #e7375c!important;
+    outline: 0;
+    box-shadow: 2px 3px 17px 0.2rem rgba(255, 0, 118, 0.12)
+}
+.radio{
+    margin-right:50px;
+}
+/* Masquer le bouton radio d'origine */
+input[type=radio]{
+    display: none;
+}
+/* Affichage par défaut du bouton radio personnalisé */
+input[type=radio] + label:before {
+    background: #fff;
+    border: 4px solid #ccc;
+    border-radius: 50%;
+    margin-top: -3px;
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 17px;
+    height: 17px;
+}
+/* Affichage du bouton radio personnalisé quand il est sélectionné */
+input[type=radio]:checked + label:before {
+    border-color: #e7375c;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+}
+label{
+    cursor:pointer;
+}
+
+
+/*Scroll card*/
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@media (max-width: 767.98px) {
+    .swiper-slide {
+        width: 100%!important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e7375c!important;
+}
+
+.swiper-scrollbar-drag {
+    background: rgba(249, 11, 11, 0.48)!important;
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    position: relative;
+    left: 1%;
+    bottom: 0%!important;
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 2%!important;
+    left: 0;
+    width: 100%;
+}
+
+/*Fin scroll card*/
+
+
+.card {
+    padding-left:auto;
+    padding-right:auto;
+    max-height:100%;
+    margin-top:15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition: .25s box-shadow;
+    transition: .25s box-shadow;
+    font-family: Lato;
+    margin-bottom: 30%;
+}
+
+.card h5 {
+    font-weight: bold;
+    padding: 0 5%;
+    margin-top: 1vw;
+}
+
+.card h5, .card small, .card p {
+    padding: 0 5%;
+    text-align: left;
+}
+
+.card p {
+    margin-top: 1.2vw;
+}
+
+
+.card:focus, .card:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.card-inverse .card-img-overlay {
+    background-color: rgba(51, 51, 51, 0.85);
+    border-color: rgba(51, 51, 51, 0.85);
+}
+.card-img-top{
+    /*margin-top:10px;*/
+}
+
+#blog {
+   height: 95%;
+
+    width: 100%;
+}
+
+#blog img {
+    width: 100%;
+}
+
+#histoire {
+    margin-top: 9vw;
+}
+
+#histoire .placement{
+    position: relative;
+}
+
+#histoire .photo1{
+}
+
+#histoire .infohistoire1{
+    background-color: #eeeeee;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    right: 0;
+}
+
+#histoire .infohistoire1 p{
+    padding: 2vw;
+    margin-bottom: 0!important;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+#histoire .infohistoire2{
+
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 100;
+}
+
+#histoire .infohistoire2 p{
+    padding: 2vw;
+    margin-bottom: 0!important;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+#btnrejoindre {
+    margin-top: 10%!important;
+}
+
+
+/*Instagram*/
+
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+
+#insta img {
+    /*width: 35%;*/
+    /*border-radius: 50%;*/
+}
+
+#insta .container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#insta .items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 50s infinite alternate linear;
+}
+
+#insta .entry {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    background: #fff;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+    #insta .items {
+        animation: carouselAnim 35s infinite alternate linear;
+    }
+
+    @keyframes carouselAnim {
+        from {
+            transform: translate(0, 0);
+        }
+        to {
+            transform: translate(calc(-100% + (2 * 300px)));
+        }
+    }
+}
+
+#insta .entry p {
+    text-align: center;
+    padding: 1em;
+}
+
+#insta .name {
+    font-weight: bold;
+}
+
+@keyframes carouselAnim {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(-100% + (5 * 300px)));
+    }
+}
+
+#insta .container .faders {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+/*#insta .faders .right,*/
+/*#insta .faders .left {*/
+    /*background: linear-gradient(*/
+            /*to left,*/
+            /*rgba(245, 245, 245, 1) 0%,*/
+            /*rgba(255, 255, 255, 0) 100%*/
+    /*);*/
+    /*width: 15%;*/
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*z-index: 200;*/
+/*}*/
+
+#insta .right {
+    right: 0;
+    background: linear-gradient(
+            to right,
+            rgba(245, 245, 245, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/*Fin insta*/
+
+
+/*Footer*/
+
+footer{
+    background-color: #F9F9F9;
+    text-align: center;
+
+}
+
+
+footer p {
+    margin: auto;
+}
+#footer_ancestree{
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:10px;
+    margin-top:30px;
+    width:120px;
+}
+.footer_ancestree2{
+    font-size:24px;
+    margin-bottom:30px;
+    margin-top:40px;
+}
+#footer_underline{
+    stroke: #e7375c;
+    stroke-width:3;
+    stroke-linecap:round;
+}
+footer ul{
+    padding:0;
+}
+footer ul li{
+    list-style: none;
+    color: #202020;
+    font-weight:300;
+    font-size:18px;
+    line-height:2.22;
+}
+.footer_icones{
+    width:50px;
+    margin-right:20px;
+}
+footer a{
+    color: #202020;
+}
+footer a:hover{
+    color: #bf212f;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*page search*/
+
+.position {
+    text-align: center;
+}
+
+.position img{
+    width: 40%;
+}
+
+.position p{
+    font-size: 0.9rem;
+}
+
+#lieu .card p {
+    margin-top: 0!important;
+}
+
+@media only screen and (max-width: 768px) {
+    .card h4 {
+        font-size: 9vw!important;
+    }
+
+    .card {
+        width: 80%!important;
+    }
+
+    header p {
+        font-size: 4vw;
+    }
+
+    .result {
+        margin-top: 25%;
+    }
+
+    #fondgauche {
+        width: 27%!important;
+    }
+
+    #fonddroit {
+        width: 21%!important;
+    }
+
+    #lieu .region {
+        margin-top: 20%!important;
+    }
+
+    #histoire {
+        margin-top: 50%!important;
+    }
+
+    .equipe_nom{
+        font-size: 8vw;
+    }
+
+    .equipe_fonction{
+        font-size: 5vw;
+    }
+
+    .ligne {
+        text-align: center;
+    }
+
+    .photoequipe {
+        text-align: center;
+    }
+
+    .rechercheAide {
+        margin-top: 5rem;
+        background-color: white!important;
+    }
+
+    #inscript {
+        margin-bottom: 120%!important;
+    }
+
+
+}
+
+.placementnom {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.card h4 {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white!important;
+}
+
+
+#grocery table, #grocery tr, #grocery td {
+    border: 1px solid !important;
+}
+
+#grocery th, #grocery .actions {
+    padding: 1%!important;
+}
+
+.nav-up {
+    top: -140px;
+}
+
+#inscript {
+    margin-bottom: 30%;
+}
+
+.navbar-toggler {
+    background-color: transparent!important;
+}
+
+.aide_mariage{
+    display:none!important;
+}
+
+.affichemariage {
+    display: block!important;
+}
+
+
+
+
